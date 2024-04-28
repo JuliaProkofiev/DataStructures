@@ -65,10 +65,10 @@ public class BuscaBinaria {
         }
         return ordenado;
     }
-//Teste
-//    public static void main(String[] args){
-//        int[] dados = new int[]{0, 1, 2, 3, 4, 5};
-//        busca_binaria(dados,5,0,6);
-//    }
+
+   // public static void main(String[] args){
+       // int[] dados = new int[]{0, 1, 2, 3, 4, 5};
+      //  busca_binaria(dados,5,0,6);
+    //}
 }
 
