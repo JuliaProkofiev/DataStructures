@@ -1,0 +1,27 @@
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Compiled class files
+out/
+bin/
+target/
+*.class
+
+# Maven
+.project
+.classpath
+.settings/
+
+# Gradle
+.gradle/
+build/
+
+# Log files
+*.log
+
+# Operating System files
+.DS_Store
+Thumbs.db
