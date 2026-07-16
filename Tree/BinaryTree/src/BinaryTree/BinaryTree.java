@@ -1,41 +1,42 @@
-package ArvoreBinaria;
+package BinaryTree;
 
-public class ArvoreBinaria {
-    private static Node raiz;
+public class BinaryTree {
+    private static Node node;
+    private static Node root;
 
-    //Construtor
-    private ArvoreBinaria(){
-        raiz = null;
+    //Constructor
+    private BinaryTree(){
+        node = null;
+        root = null;
     }
 
-    //ElementoMinimo: Função Auxiliar
-    private Node ElementoMinimo(Node m) {
-        Node minimo = null;
-        while(m != null) {
-            minimo = m;
-            m = m.Esquerda();
+    private Node minimumElement(Node node) {
+        Node minimum = null;
+        while(node != null) {
+            minimum = node;
+            node = node.getLeft();
         }
-        return minimo;
+        return minimum;
     }
 
-    //1. Implemente um algoritmo para inserir um elemento em uma árvore binária de busca.
-    private static Node inserir(int info, Node a){
-        if (a == null) {
-            a = new Node(info);
+    //Insert Into
+    private static Node insert(int element, Node node){
+        if (node == null) {
+            node = new Node(element);
         } else {
-            if (info >= a.Elemento()) {
-                a.InsereDireita(inserir(info, a.Direita));
-                a.Direita();
+            if (element >= node.getElement()) {
+                node.insertRight(insert(element, node.getRight()));
+                //node = node.Direita();
             } else {
-                a.InsereEsquerda(inserir(info, a.Esquerda));
-                a.Esquerda();
+                node.insertLeft(insert(element, node.getLeft()));
+                //node = node.Esquerda();
             }
         }
-        return a;
+        return node;
     }
 
-    private static void InserirRaiz(int info){
-        raiz = inserir(info, raiz);
+    private static void insertRoot(int element){
+        root = insert(element, new Node());
     }
 
     //2. Implemente algoritmos para percorrer uma árvore binária nas formas pré-ordem, in-ordem e pós-ordem.

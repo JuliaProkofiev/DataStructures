@@ -81,9 +81,7 @@ public class HashTable {
         return totalElements;
     }
 
-    /**
-     * Main method for testing the HashTable implementation.
-     */
+
     public static void main(String[] args) {
         // Create a HashTable with a size of 10
         HashTable myHashTable = new HashTable(10);

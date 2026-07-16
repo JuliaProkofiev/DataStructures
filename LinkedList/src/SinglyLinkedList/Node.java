@@ -1,26 +1,27 @@
-package ListaEncadeada;
+package SinglyLinkedList;
 
 public class Node {
-    private int elemento;
-    private Node proximo;
+    private int element;
+    private Node next;
 
-    public Node(int elemento){
-        this.elemento = elemento;
-        this.proximo = null;
-    }
-    public void InsereElemento(int elemento){
-        this.elemento = elemento;
+    public Node(int element) {
+        this.element = element;
+        this.next = null;
     }
 
-    public int Elemento(){
-        return elemento;
+    public void setElement(int element) {
+        this.element = element;
     }
 
-    public void InsereProximo(Node proximo) {
-        this.proximo = proximo;
+    public int getElement() {
+        return element;
     }
 
-    public Node Proximo(){
-        return proximo;
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    public Node getNext() {
+        return next;
     }
 }
